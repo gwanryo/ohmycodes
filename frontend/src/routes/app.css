@@ -1,9 +1,29 @@
+/* latin */
 @font-face {
-  font-family: D2Coding;
+  font-family: 'JetBrains D2 Mono';
+  font-style: italic;
+  font-weight: 100 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/jetbrainsmono/v20/tDbX2o-flEEny0FZhsfKu5WU4xD-CwOnSGjW7BA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'JetBrains D2 Mono';
+  font-style: normal;
+  font-weight: 100 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/jetbrainsmono/v20/tDbV2o-flEEny0FZhsfKu5WU4xD7OwGtT0rU.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* korean */
+@font-face {
+  font-family: 'JetBrains D2 Mono';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/D2Coding.woff')
-    format('woff');
+format('woff');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
+  unicode-range: U+AC00-D7AF;
 }
 
 :root {
@@ -65,7 +85,7 @@ body {
   height: auto !important;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
-  font-family: D2Coding, Consolas, monospace !important;
+  font-family: 'JetBrains D2 Mono', Consolas, monospace !important;
 }
 
 .CodeMirror-lines {
@@ -153,6 +173,10 @@ button:is(:focus, :hover) {
   display: grid;
 }
 
+.gutter * {
+  font-family: 'JetBrains D2 Mono', Consolas, monospace !important;
+}
+
 .gutter.highlight {
   background-color: var(--highlight);
 }
@@ -164,7 +188,6 @@ button:is(:focus, :hover) {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   color: var(--gray4);
-  font-family: D2Coding, Consolas, monospace;
   user-select: none;
   cursor: pointer;
   border-right: 2px solid transparent;
